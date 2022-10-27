@@ -1,4 +1,4 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import AsyncStorage from 'react-native';
 import axios from 'axios';
 import React from 'react';
 import {
@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import Button from '../../../button';
+import Button from '../button';
 
 // on cree la page et on ne fait de rien de complexe
 // on verifie juste que sa fonctionne
