@@ -11,13 +11,16 @@ import {
 } from 'react-native';
 
 import Home from './src/components/screens/home';
-import Connexion from './src/components/connexion';
+import Connexion from './src/components/screens/connexion';
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <Home />
+    <SafeAreaView>
+      <Home />
+      <Connexion />
+    </SafeAreaView>
   );
 };
 
