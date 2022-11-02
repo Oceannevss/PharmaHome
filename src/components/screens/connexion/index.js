@@ -1,4 +1,4 @@
-import AsyncStorage from 'react-native';
+import {AsyncStorage} from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import React from 'react';
 import {Text, TextInput, View} from 'react-native';
@@ -13,7 +13,7 @@ const Connexion = ({navigation}) => {
   const [password, setPassword] = React.useState('');
 
   // creation de la fonction qui vas envoyer les donnees a l'API
-  const submitForm = () => {
+  const submitForm = async () => {
     axios({
       method: 'POST',
       url: 'https://easy-login-api.herokuapp.com/users/login',

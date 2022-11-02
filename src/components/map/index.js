@@ -1,12 +1,15 @@
 import React from 'react';
 import {StyleSheet, Text, View, Dimensions} from 'react-native';
 import MapView from 'react-native-maps';
+import styled from 'styled-components';
 
 const Map = () => {
   return (
-    <View style={styles.container}>
-      <MapView style={styles.map} />
-    </View>
+    <Container>
+      <View style={styles.container}>
+        <MapView style={styles.map} region={this} />
+      </View>
+    </Container>
   );
 };
 
@@ -22,5 +25,12 @@ const styles = StyleSheet.create({
     height: Dimensions.get('window').height,
   },
 });
+
+const Container = styled.Container`
+  flex: 1;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+`;
 
 export default Map;
