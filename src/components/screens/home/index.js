@@ -1,10 +1,12 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import styled, {css} from 'styled-components';
 
 const Home = () => {
-  return <Text style={style.home}> PHARMA HOME</Text>;
+  return <HomeStyled> Phama Home</HomeStyled>;
 };
 
+//<Text style={style.home}> PHARMA HOME</Text>
 const style = StyleSheet.create({
   home: {
     fontSize: 20,
@@ -13,5 +15,10 @@ const style = StyleSheet.create({
     marginTop: 200,
   },
 });
+
+const HomeStyled = styled.text`
+  font-size: 20;
+  font-weight: bold;
+`;
 
 export default Home;

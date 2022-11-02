@@ -1,10 +1,10 @@
 import React from 'react';
 import {Text, TouchableOpacity, SafeAreaView} from 'react-native';
 
-const Categories = () => {
+const Categories = ({navigation}) => {
   const UneCategorie = () => {
     return (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('ListeMedicament')}>
         <Text>Une Categories</Text>
       </TouchableOpacity>
     );
