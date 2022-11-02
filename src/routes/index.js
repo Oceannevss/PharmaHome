@@ -1,11 +1,10 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Home from './src/components/screens/home';
 import Connexion from '../components/screens/connexion';
-import Categories from './src/components/screens/categories';
-import MedList from '/./src/components/screens/medList';
-import Med from './src/components/screens/med';
+import Categories from '../components/screens/categories';
+import MedList from '../components/screens/medList';
+import Med from '../components/screens/med';
 const Stack = createNativeStackNavigator();
 
 const Routes = () => {
@@ -15,7 +14,6 @@ const Routes = () => {
         screenOptions={{
           headerShown: false,
         }}>
-        <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Connexion" component={Connexion} />
         <Stack.Screen name="Categories" component={Categories} />
         <Stack.Screen name="ListeMedicament" component={MedList} />

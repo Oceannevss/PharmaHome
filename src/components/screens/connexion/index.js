@@ -1,18 +1,13 @@
 import {AsyncStorage} from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import React from 'react';
-import {Text, TextInput, View} from 'react-native';
+import {Text, TextInput, TouchableOpacity, View} from 'react-native';
 import Button from '../../button';
-import {useNavigation} from '@react-navigation/native';
-
-//const navigation = useNavigation();
+import styled from 'styled-components';
 
 const Connexion = ({navigation}) => {
-  // creation des variable necessaire au login avec les useState
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
-
-  // creation de la fonction qui vas envoyer les donnees a l'API
   const submitForm = async () => {
     axios({
       method: 'POST',
@@ -32,8 +27,16 @@ const Connexion = ({navigation}) => {
       });
   };
 
+  const HomeStyled = styled.Text`
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 40px;
+  `;
+
   return (
     <View>
+      <HomeStyled> Phama Home</HomeStyled>
       <View>
         <Text>Username</Text>
         <TextInput onChangeText={setUsername} value={username} />
@@ -41,6 +44,12 @@ const Connexion = ({navigation}) => {
         <TextInput onChangeText={setPassword} value={password} />
       </View>
       <Button label="SUBMIT" onPress={submitForm} />
+      <TouchableOpacity onPress={() => navigation.navigate('Categories')}>
+        <Text>To Categrories</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('ListeMedicament')}>
+        <Text>Med List</Text>
+      </TouchableOpacity>
     </View>
   );
 };

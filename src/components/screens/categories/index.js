@@ -1,12 +1,17 @@
 import React from 'react';
 import {Text, TouchableOpacity, SafeAreaView} from 'react-native';
+import FlashMessage from 'react-native-flash-message';
+//<FlashMessage position="top" message="Voici la page categories" />
 
 const Categories = ({navigation}) => {
   const UneCategorie = () => {
     return (
-      <TouchableOpacity onPress={() => navigation.navigate('ListeMedicament')}>
-        <Text>Une Categories</Text>
-      </TouchableOpacity>
+      <SafeAreaView>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('ListeMedicament')}>
+          <Text>Une Categories</Text>
+        </TouchableOpacity>
+      </SafeAreaView>
     );
   };
 

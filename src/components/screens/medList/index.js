@@ -20,7 +20,7 @@ const MedList = ({navigation}) => {
     })
       .then(res => {
         console.log(res.data);
-        setMeds(...meds, ...res.data);
+        setMeds([...meds, ...getMeds.data.data.res]);
       })
       .catch(err => {
         console.log(err);

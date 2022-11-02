@@ -10,18 +10,12 @@ import {
   View,
 } from 'react-native';
 
-import Home from './src/components/screens/home';
-import Connexion from './src/components/screens/connexion';
+import Routes from './src/routes';
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  return (
-    <SafeAreaView>
-      <Home />
-      <Connexion />
-    </SafeAreaView>
-  );
+  return <Routes />;
 };
 
 export default App;

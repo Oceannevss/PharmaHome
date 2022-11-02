@@ -4,14 +4,10 @@ import styled from 'styled-components';
 
 const Button = ({onPress, label}) => {
   return (
-    <StyledButton onPress={onPress}>
+    <TouchableOpacity onPress={onPress}>
       <Text>{label}</Text>
-    </StyledButton>
+    </TouchableOpacity>
   );
 };
 
-const StyledButton = styled.TouchableOpacity`
-  background-color: red;
-  font-size: 32px;
-`;
 export default Button;
