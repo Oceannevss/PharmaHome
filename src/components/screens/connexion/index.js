@@ -1,4 +1,4 @@
-import {AsyncStorage} from '@react-native-async-storage/async-storage';
+import {AsyncStorage} from 'react-native';
 import axios from 'axios';
 import React from 'react';
 import {Text, TextInput, TouchableOpacity, View} from 'react-native';
@@ -43,7 +43,9 @@ const Connexion = ({navigation}) => {
         <Text>Password</Text>
         <TextInput onChangeText={setPassword} value={password} />
       </View>
-      <Button label="SUBMIT" onPress={submitForm} />
+      <TouchableOpacity onPress={submitForm}>
+        <Text>SUBMIT</Text>
+      </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate('Categories')}>
         <Text>To Categrories</Text>
       </TouchableOpacity>
